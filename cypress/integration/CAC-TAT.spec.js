@@ -45,7 +45,7 @@ describe('Central de Atendimento ao Cliente TAT', function () {
     it('seleciona um arquivo simulando um drag-and-drop', () => {
         cy.get('[type="file"]')
             .should('not.have.value')
-            .selectFile('C:/Users/elcio.dalosto/Desktop/tat-cypress/cypress-basico-v2/cypress/fixtures/example.json', { action: 'drag-drop' })
+            .selectFile('./cypress/fixtures/example.json', { action: 'drag-drop' })
         cy.get('[type="file"]')
             .should(function ($input) {
                 // console.log($input)
@@ -55,7 +55,7 @@ describe('Central de Atendimento ao Cliente TAT', function () {
     it('seleciona um arquivo da pasta fixtures', () => {
         cy.get('[type="file"]')
             .should('not.have.value')
-            .selectFile('C:/Users/elcio.dalosto/Desktop/tat-cypress/cypress-basico-v2/cypress/fixtures/example.json')
+            .selectFile('./cypress/fixtures/example.json')
         cy.get('[type="file"]')
             .should(function ($input) {
                 // console.log($input)
